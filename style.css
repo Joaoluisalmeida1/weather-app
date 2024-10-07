@@ -12,24 +12,23 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+    background: url('default.jpg') no-repeat center center/cover;
     transition: background 0.5s ease;
     color: #fff;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Container */
+/* Container: Ensure it stands out against the background */
 .container {
-    background: rgba(255, 255, 255, 0.1); /* Almost transparent */
+    background: rgba(255, 255, 255, 0.15);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
     width: 100%;
-    max-width: 400px;
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    max-width: 500px; /* Increased width for better spacing */
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Header Styles */
@@ -53,9 +52,9 @@ form {
 input {
     width: 75%;
     padding: 12px;
-    border-radius: 50px; /* Rounded input */
+    border-radius: 50px;
     border: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
     color: white;
     text-align: center;
     font-size: 1rem;
@@ -73,12 +72,11 @@ input:focus {
 
 button {
     padding: 12px 20px;
-    background-color: rgba(0, 123, 255, 0.7); /* Soft blue */
+    background-color: rgba(0, 123, 255, 0.7);
     border: none;
-    border-radius: 50px; /* Rounded button */
+    border-radius: 50px;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 1rem;
 }
 
@@ -93,7 +91,7 @@ button:active {
 
 /* Weather Info Display */
 .weather-info {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .weather-info.hidden {
@@ -150,6 +148,59 @@ button:active {
 
 #toggleTemp:active {
     transform: translateY(0);
+}
+
+/* Forecast container styling */
+#forecast-container {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.forecast-container.hidden {
+    display: none;
+}
+
+/* Grid layout for forecast */
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust number of columns for better layout */
+    gap: 15px;
+    justify-items: center;
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 150px; /* Fix width to make it neater */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.forecast-day p {
+    margin: 5px 0;
+}
+
+.forecast-day p.date {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.forecast-day p.conditions {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Temperature styling */
+.forecast-day p.temperature {
+    margin-top: 10px;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */

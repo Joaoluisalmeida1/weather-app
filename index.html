@@ -20,7 +20,18 @@
             <h2 id="city-name"></h2>
             <p id="weather-condition"></p>
             <p>Temperature: <span id="temp"></span>°<span id="unit">C</span></p>
+            <p>Local Time: <span id="local-time"></span></p>
+            <p>Humidity: <span id="humidity"></span>%</p>
+            <p>Wind: <span id="wind"></span> km/h</p>
+            <p>Sunrise: <span id="sunrise"></span></p>
+            <p>Sunset: <span id="sunset"></span></p>
             <button id="toggleTemp">Toggle °C/°F</button>
+        </div>
+
+        <!-- New box for forecast below -->
+        <div id="forecast-container" class="forecast-container hidden">
+            <h3>7-Day Forecast</h3>
+            <div id="forecast" class="forecast-grid"></div>
         </div>
 
         <div id="loading" class="loading hidden">Loading...</div>
