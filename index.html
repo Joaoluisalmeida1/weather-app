@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Forecast</h1>
+            <form id="locationForm">
+                <input type="text" id="location" placeholder="Enter location" required>
+                <button type="submit">Get Weather</button>
+            </form>
+        </header>
+
+        <div id="weather-info" class="weather-info hidden">
+            <h2 id="city-name"></h2>
+            <p id="weather-condition"></p>
+            <p>Temperature: <span id="temp"></span>°<span id="unit">C</span></p>
+            <button id="toggleTemp">Toggle °C/°F</button>
+        </div>
+
+        <div id="loading" class="loading hidden">Loading...</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
